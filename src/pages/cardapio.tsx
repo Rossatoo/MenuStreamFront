@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import './Cardapio.css';
+import './cardapio.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+
+import { Link } from 'react-router-dom';
+
 import { useProductData } from '../hooks/useProductData';
 import { productData } from '../interface/productData';
-import { Navbar } from '../components/navbar/navbar';
 import { Card } from '../components/Card/card';
 import { CreateModal } from '../components/Create-Modal/Create-Modal';
 import { UpdateModal } from '../components/Update-Modal/Update-Modal';
 import { DeleteModal } from '../components/Delete-Modal/Delete-Modal';
-import { Link } from 'react-router-dom';
-import AppRoutes from '../Routes';
 
-function cardapio() {
+
+const cardapio = () =>{
   const { data } = useProductData();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
@@ -45,9 +46,6 @@ function cardapio() {
 
   return (
     <>
-      <Navbar />
-      <Link to="/cardapio">Cardapio</Link> | <Link to="/admin">Admin</Link>
-        <AppRoutes />
       <div className="container-principal">
         <center><h1>MenuStream</h1></center>
         <div className="text-center mt-4">
