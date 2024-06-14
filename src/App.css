@@ -1,47 +1,80 @@
-
-
-.container{
-  /* border: 1px solid red; */
+.card-wrapper {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  width: 100vw;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+  background-color: #fff;
   text-align: center;
-}
-
-.card-grid{
-  /* border: 3px solid green; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-  
-}
-
-.card-container{
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  
-  /*border: 1px solid #ddd;*/
-  border-radius: 8px;
-  padding: 18px;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: white;
 }
 
-.card-container .update-button {
-  margin-top: 16px;
-  
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: rgb(19, 16, 16);
+.card-wrapper .btn {
+  width: 48%;
+}
+
+.card-wrapper .d-flex {
+  margin-top: auto;
+}
+
+.container-principal {
+  background-color: rgba(255, 255, 255, 0.733);
+}
+
+.navbar-orange {
+  background-color: #e96130;
+}
+
+.navbar-orange .navbar-brand,
+.navbar-orange .nav-link,
+.navbar-orange .navbar-toggler-icon,
+.navbar-orange .dropdown-item {
+    color: white !important;
+}
+
+.navbar-orange .dropdown-menu {
+    background-color: orange;
+}
+
+.navbar-orange .dropdown-item:hover {
+    background-color: darkorange;
+}
+
+.navbar-orange .dropdown-item:focus, 
+.navbar-orange .dropdown-item:active {
+    background-color: darkorange;
+}
+
+.btn-warning {
+  border: 1px solid #e96130;
+  border-radius: 6px;
+  background-color: white;
+  color: #e96130;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.card-container .update-button:hover {
-  background-color: #cc573a;
+.btn-warning:hover {
+  background-color: #e96130;
+  color: white;
 }
+
+.btn-novo {
+  border: 1px solid #e96130;
+  border-radius: 6px;
+  background-color: #e96130;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+}
+
+.btn-novo:hover {
+  background-color: white;
+  color: #e96130;
+}
+

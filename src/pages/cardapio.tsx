@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import './App.css';
-import { useProductData } from './hooks/useProductData';
-import { Card } from './components/Card/card';
-import { CreateModal } from './components/Create-Modal/Create-Modal';
-import { UpdateModal } from './components/Update-Modal/Update-Modal';
-import { productData } from './interface/productData';
-import { DeleteModal } from './components/Delete-Modal/Delete-Modal';
+import './Cardapio.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar } from './components/navbar/navbar';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import { useProductData } from '../hooks/useProductData';
+import { productData } from '../interface/productData';
+import { Navbar } from '../components/navbar/navbar';
+import { Card } from '../components/Card/card';
+import { CreateModal } from '../components/Create-Modal/Create-Modal';
+import { UpdateModal } from '../components/Update-Modal/Update-Modal';
+import { DeleteModal } from '../components/Delete-Modal/Delete-Modal';
+import { Link } from 'react-router-dom';
+import AppRoutes from '../Routes';
 
-function App() {
+function cardapio() {
   const { data } = useProductData();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
@@ -44,6 +46,8 @@ function App() {
   return (
     <>
       <Navbar />
+      <Link to="/cardapio">Cardapio</Link> | <Link to="/admin">Admin</Link>
+        <AppRoutes />
       <div className="container-principal">
         <center><h1>MenuStream</h1></center>
         <div className="text-center mt-4">
@@ -88,4 +92,4 @@ function App() {
   );
 }
 
-export default App;
+export default cardapio;
