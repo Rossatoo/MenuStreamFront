@@ -1,17 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import App from './App';
-import Cardapio from './pages/cardapio.tsx';
-import Admin from './pages/admin.tsx';
-
+import Home from './pages/home';
+import Cart from './pages/cart';
+import Products from './pages/products';
 
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-        <Route path='/' element={<App />} />
-        <Route path="/cardapio" element={<Cardapio />} />
-        <Route path="/admin" element={<Admin />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/products" element={<Products />} />
     </Routes>
   );
 };
+
 export default AppRoutes;
