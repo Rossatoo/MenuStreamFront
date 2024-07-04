@@ -14,4 +14,19 @@
 }
 
 
+.btn-add-to-cart {
+    border: 1px solid #e96130;
+    border-radius: 6px;
+    background-color: #e96130;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    width: 100%;
+}
 
+.btn-add-to-cart:hover {
+    background-color: white;
+    color: #e96130;
+}
